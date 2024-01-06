@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dani K.</title>
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="/assets/script/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+
+  <div class="loader" id="loader">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="name">
+      <h1>Dani K.</h1>
+      <small>Chargement...</small>
+    </div>
+  </div>
+
+    <div class="home" id="accueil">
+        <div class="topbar">
+          <div class="profile">
+            <div class="menu" >
+              <i class="bx bx-menu" id="menu"></i>
+            </div>
+            <a href="#">
+              <div class="logo">
+                <img src="/assets/images/logo-agence.png" />
+              </div>
+              <h1>Dani K.</h1>
+            </a>
+          </div>
+  
+          <nav class="ordi">
+            <a href="/index.html">Accueil</a>
+            <a href="service.html">Service</a>
+            <a href="horaire.html">Horaire</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="apropos.html">A propos</a>
+          </nav>
+  
+          <nav class="tablette" id="tablette">
+            <div class="menu">
+              <i class='bx bx-x' id="menuTablette"></i>
+              <div class="logo">
+                <img src="/assets/images/logo-agence.png" />
+              </div>
+              <h1>Dani K.</h1>
+            </div>
+            <a href="/index.html" ><i class='bx bxs-home'></i></i>Accueil</a>
+            <a href="horaire.html" ><i class='bx bxs-calendar-alt'></i>Horaire</a>
+            <a href="service.html" ><i class='bx bxs-widget'></i>Service</a>
+            <a href="contact.html"  class="active" ><i class='bx bxs-phone' ></i>Contact</a>
+            <a href="apropos.html" ><i class='bx bxs-compass' ></i>A propos</a>
+          </nav>
+  
+          <nav class="mobile">
+            
+            <a href="/index.html" id="CAccueil"><i class='bx bxs-home'></i></i>Accueil</a>
+            <a href="horaire.html" id="CHoraire"><i class='bx bxs-calendar-alt'></i>Horaire</a>
+            <a href="service.html" id="CService"><i class='bx bxs-widget'></i>Service</a>
+            <a href="contact.html"  class="active" id="CContact"><i class='bx bxs-phone' ></i>Contact</a>
+            <a href="apropos.html" id="CApropos"><i class='bx bxs-compass' ></i>A propos</a>
+          </nav>
+        </div>
+  
+      </div>
+
+      <br><br><br><br>
+
+    <div class="container" id="contact">
+      <h1>Nous contacter</h1>
+      <small>Veuillez laisser un message et notre assistant vous guidera ! <br> Pour réserver une audience </small>
+      <form>
+        <input type="text" name="" id="username" placeholder="Votre nom" />
+        <input type="email" name="" id="email" placeholder="Votre adresse e-mail" :>
+        <textarea name="" id="message" cols="30" rows="5" placeholder="Votre message..."></textarea>
+        <button type="button" id="btn">Envoyer</button>
+        <div class="loading" id="loading">
+          <div class="loaderAction" id="loaderAction">
+            <div class="firstAction"></div>
+            <div class="secondAction"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  <div class="box-message" id="boxMessage">
+    <div class="head">
+      <h3>Message</h3>
+      <i class='bx bx-x' id="closeBox"></i>
+    </div>
+    <div class="content">
+      <i class='bx bx-x-circle' id="changeIcon" ></i>
+      <small id="output">je suis né pour regner pour regner dans ce monde des fous et aveugles et tout cracker</small>
+    </div>
+
+
+  </div>
+    
+    
+    <script src="/assets/script/app.js"></script>
+  </body>
+</html>
