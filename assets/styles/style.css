@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Archivo+Black&display=swap");
+:root {
+  --background1: #f1f1f1;
+  --background2: #fbfbfb;
+  --colorgray1: #2c3e50;
+  --colorgray2: #dbdbdb;
+  --colorblack100: #000;
+  --colorblack60: rgba(0, 0, 0, 0.6);
+  --colorblack38: rgba(0, 0, 0, 0.38);
+  --colorwhite100: #fff;
+  --colorwhite67: rgba(255, 255, 255, 0.67);
+  --colorbtn1: #8fbc8f;
+  --colorbtn2: #3cb371;
+  --colorgreen: #228b22;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background1);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*=================================== Navigation Bar =================================*/
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: rgba(196, 196, 196, 0.3) 0px 1px 2px 0px,
+    rgba(181, 221, 252, 0.15) 0px 2px 6px 2px;
+}
+header .logo a {
+  text-decoration: none;
+}
+header .logo h1 {
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--colorblack100);
+}
+header .logo span {
+  color: var(--colorgreen);
+  text-decoration: underline;
+  font-weight: 200;
+}
+header .menu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--colorblack38);
+  padding: 10px 13px;
+  gap: 5px;
+  transition: 0.5s ease-in-out;
+}
+nav a:hover,
+nav a.active {
+  color: var(--colorgreen);
+}
+
+/*================================ Container ================================*/
+.container {
+  padding: 50px 20px;
+  width: 100%;
+  background: linear-gradient(var(--colorblack38), var(--colorblack60)),
+    url("/assets/images/roman-synkevych-fjj7lVpCxRE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*================================== View ====================================*/
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(var(--colorblack38), var(--colorblack60));
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  gap: 15px;
+}
+.view h1 {
+  color: var(--colorwhite100);
+  font-size: 30px;
+}
+.view h3 {
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--colorwhite100);
+}
+
+/*================================ Accordion ================================*/
+.accordion {
+  background-color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  width: 75%;
+  max-width: 600px;
+}
+
+.accordion h2 {
+  font-size: 24px;
+  text-align: center;
+  padding: 15px;
+}
+
+.content-container {
+  position: relative;
+  line-height: 1.5rem;
+  text-align: justify;
+  border-bottom: 1px solid #000;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.content-container .quesiton {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.content-container .quesiton::after {
+  content: "+";
+  position: absolute;
+  right: -5px;
+  transition: 0.5s ease-in-out;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.content-container .answer {
+  height: 0px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordion .content-container.active .answer {
+  height: auto;
+  padding-bottom: 15px;
+  transition: 0.5s;
+}
+
+.accordion .content-container.active .quesiton::after {
+  content: "-";
+  transition: 0.5s ease-in-out;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/*================================ Content ==================================*/
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.content hgroup h4 {
+  font-size: 2rem;
+  color: var(--colorgray2);
+  font-weight: 200;
+}
+.content hgroup h1 {
+  font-size: 3.5rem;
+  color: var(--colorwhite100);
+  font-family: "Alfa Slab One", serif;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+.content hgroup p {
+  color: var(--colorgray2);
+}
+.content hgroup button,
+.content hgroup a,
+.view button {
+  padding: 10px 15px;
+  margin-top: 15px;
+  border: 1px solid var(--colorgray2);
+  color: var(--colorblack38);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  gap: 0;
+  background-color: var(--colorgray2);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.content hgroup button:hover,
+.view button:hover,
+.content hgroup a:hover {
+  color: var(--colorblack100);
+  cursor: pointer;
+}
+
+/*=================================== Box ====================================*/
+.box {
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.box h1 {
+  color: var(--colorblack60);
+}
+.box .box-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.box form {
+  max-width: 600px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.box form .personnel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.box form .personnel input {
+  width: calc(50% - 5px);
+}
+.box form input,
+.box form textarea {
+  padding: 15px;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  resize: none;
+  border: none;
+  outline: none;
+  border: 1px solid transparent;
+}
+.box form input:focus,
+.box form textarea:focus {
+  border: 1px solid var(--colorbtn2);
+}
+.box form button {
+  padding: 15px;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: var(--colorbtn1);
+  color: var(--colorblack60);
+  transition: 0.5s;
+}
+.box form button:hover {
+  cursor: pointer;
+  background-color: var(--colorbtn2);
+  color: var(--colorblack100);
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  flex-direction: column;
+  margin: 0 20px;
+  background-color: var(--background2);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.card-image img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card-image img:hover {
+  transform: scale(1.3);
+}
+.card label {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px;
+}
+.card .card-description {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.card .card-description a {
+  text-decoration: none;
+  background-color: var(--background1);
+  color: var(--colorblack38);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
+}
+.card .card-description a:hover {
+  color: var(--colorblack100);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.card .card-description .starts {
+  display: flex;
+  color: var(--colorgreen);
+}
+
+/*================================ Infos ===================================*/
+.infos {
+  background-color: var(--background2) !important;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 50px;
+}
+.infos .infos-content {
+  max-width: 1080px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  gap: 20px;
+}
+.infos h1 {
+  text-align: center;
+  color: var(--colorgreen);
+}
+.infos p {
+  text-align: justify;
+}
+.infos .image {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(68, 124, 68, 0.379);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.infos .image img {
+  width: 200%;
+}
+
+/*================================= Footer =================================*/
+footer {
+  background-color: var(--colorblack100);
+  color: var(--background1);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+footer i {
+  font-size: 24px;
+  margin: 0 5px;
+  color: var(--colorgray2);
+}
+footer i:hover {
+  color: var(--colorbtn2);
+}
+footer a {
+  color: var(--colorbtn2);
+}
+
+/*============================== Responsive ================================*/
+
+@media only screen and (max-width: 520px) {
+  h1 {
+    font-size: 24px !important;
+  }
+  nav {
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background2);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    gap: 0;
+  }
+  nav a {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+  }
+  nav a i {
+    font-size: 24px;
+  }
+  .box {
+    padding: 50px 0px;
+  }
+  .box form .personnel {
+    display: flex;
+    gap: 15px;
+  }
+  .box form .personnel input {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+  .accordion {
+    width: 95%;
+  }
+  footer {
+    padding-bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 950px) {
+  header .menu {
+    display: block;
+    font-size: 24px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 0;
+    background-color: var(--background2);
+    gap: 0;
+    height: 100vh;
+    padding-top: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+  }
+  nav.open {
+    width: 300px;
+  }
+  nav a {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid var(--colorgray2);
+  }
+  .box {
+    padding: 50px 10px;
+  }
+  .box form .personnel {
+    display: flex;
+    gap: 15px;
+  }
+  .box form .personnel input {
+    width: 100%;
+  }
+}
