@@ -65,6 +65,7 @@ nav {
   display: flex;
   justify-content: space-between;
   gap: 35px;
+  z-index: 1000;
 }
 nav a {
   display: flex;
