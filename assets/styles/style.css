@@ -449,6 +449,9 @@ footer a {
   .box {
     padding: 50px 0px;
   }
+  .box p{
+    padding: 10px;
+  }
   .box form .personnel {
     display: flex;
     gap: 15px;
