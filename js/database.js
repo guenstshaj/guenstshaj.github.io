@@ -4,6 +4,11 @@ const db = [
         name : 'Bérénice', 
         Contribution : [1000]
     },
+     {
+        id: 2, 
+        name : 'Andy', 
+        Contribution : [5000]
+    },
     
 ]
 
