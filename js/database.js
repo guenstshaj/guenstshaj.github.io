@@ -27,7 +27,7 @@ db.forEach(person => {
         contribution.innerHTML = '<emb>En cours...</emb>';
         contribution.style.color = "red";
     }else{
-        contribution.innerHTML = '<emb>Terminé</emb>';
+        contribution.innerHTML = '<emb>Terminé</emb><i class='fas fa-hand-peace'></i>';
         contribution.style.color = "green";
     }
 
