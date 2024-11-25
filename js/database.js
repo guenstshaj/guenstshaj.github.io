@@ -24,7 +24,7 @@ db.forEach(person => {
     contribution.innerHTML = totalContribution;
 
     if(totalContribution < 5000){
-        contribution.innerHTML = '<emb>En cours...</emb>';
+        contribution.innerHTML = '<emb>En cours de payement...</emb>';
         contribution.style.color = "red";
     }else{
         contribution.innerHTML = '<emb>En ordre</emb>';
