@@ -19,6 +19,11 @@ const db = [
         name : 'Dan', 
         Contribution : [2500,2500]
     },
+    {
+        id: 5, 
+        name : 'Plamedie', 
+        Contribution : [3000]
+    },
     
 ]
 
