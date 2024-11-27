@@ -52,7 +52,7 @@ h2 small {
         padding-right: 30px;
     }
     .responsive-table .table-header {
-        display: none;
+        display: block;
    }
     .responsive-table li {
         display: block;
