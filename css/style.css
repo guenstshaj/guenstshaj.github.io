@@ -45,7 +45,7 @@ h2 small {
 }
 @media all and (max-width: 767px) {
     .container-tab {
-        
+        display: flexbox;
         margin-left: auto;
         margin-right: auto;
         padding-left: 0px;
