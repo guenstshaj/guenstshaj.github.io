@@ -81,7 +81,7 @@ users.push(new Utilisateur("Miradi","Membre", [1000,3000]));
 users.push(new Utilisateur("Monsieur Guens","Membre", [5000]));
 users.push(new Utilisateur("Eli","Membre", [5000]));
 users.push(new Utilisateur("Gigie","Membre", [5000]));
-users.push(new Utilisateur("John","Membre", [5000]));
+users.push(new Utilisateur("Johnson","Membre", [5000]));
 
 
 
