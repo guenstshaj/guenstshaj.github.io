@@ -77,7 +77,7 @@ users.push(new Utilisateur("Bérénice","Membre", [1000,4000]));
 users.push(new Utilisateur("Dan","Membre", [2500,2500,3000]));
 users.push(new Utilisateur("Andy","Membre", [5000]));
 users.push(new Utilisateur("Lionnel","Membre", [5000]));
-users.push(new Utilisateur("Miradi","Membre", [1000,3000]));
+users.push(new Utilisateur("Miradi","Membre", [1000,3000,1000]));
 users.push(new Utilisateur("Monsieur Guens","Membre", [5000]));
 users.push(new Utilisateur("Eli","Membre", [5000]));
 users.push(new Utilisateur("Gigie","Membre", [5000]));
