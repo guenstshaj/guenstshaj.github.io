@@ -82,7 +82,7 @@ users.push(new Utilisateur("Monsieur Guens","Membre", [5000]));
 users.push(new Utilisateur("Eli","Membre", [5000]));
 users.push(new Utilisateur("Gigie","Membre", [5000]));
 users.push(new Utilisateur("Johnson","Membre", [5000]));
-users.push(new Utilisateur("Eric","Invité", [3000]));
+users.push(new Utilisateur("Eric","Invité", [3000,2000]));
 
 
 // Appeler la fonction pour afficher les utilisateurs
