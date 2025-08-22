@@ -1,0 +1,103 @@
+:root {
+  /* 🎨 Palette */
+  --bg-main: #0d1117;
+  --bg-secondary: #161b22;
+  --header-footer: #0a0f14;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #9ba3af;
+
+  --accent-primary: #00ff99;
+  --accent-secondary: #00bcd4;
+  --danger: #ff3b3b;
+
+  --border-color: #2d333b;
+
+  --font-title: "Orbitron", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-code: "Share Tech Mono", monospace;
+  --border-size: 5px;
+
+  --glow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-secondary);
+}
+
+.hero {
+  background-color: var(--bg-secondary);
+  height: 600px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  font-weight: bolder;
+  text-shadow: var(--glow);
+  animation: glow 2s infinite alternate;
+}
+.hero p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+/* Canvas Matrix en fond */
+#matrix-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1; /* le texte passe au-dessus du canvas */
+}
+
+/* 📦 Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-size);
+  max-width: 500px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.1);
+}
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.4), 0 0 40px rgba(0, 224, 255, 0.2);
+  transform: translateY(-5px);
+}
+.card h3 {
+  color: var(--accent-secondary);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  text-shadow: var(--glow);
+  margin-bottom: 1rem;
+}
+
+/* ✨ Glow Animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px var(--accent-primary), 0 0 10px var(--accent-secondary),
+      0 0 20px var(--accent-primary);
+  }
+  to {
+    text-shadow: 0 0 15px var(--accent-secondary),
+      0 0 30px var(--accent-primary), 0 0 50px var(--accent-secondary);
+  }
+}
