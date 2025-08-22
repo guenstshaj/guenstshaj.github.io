@@ -109,6 +109,9 @@ nav > a {
 }
 
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
   header {
     padding: 30px 20px;
   }
@@ -156,3 +159,4 @@ nav > a {
     transform: translateY(0);
   }
 }
+
