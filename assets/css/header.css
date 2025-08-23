@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap");
+
+:root {
+  /* 🎨 Palette */
+  --bg-main: #0d1117;
+  --bg-secondary: #161b22;
+  --header-footer: #0a0f14;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #9ba3af;
+
+  --accent-primary: #00ff99;
+  --accent-secondary: #00bcd4;
+  --danger: #ff3b3b;
+
+  --border-color: #2d333b;
+
+  --font-title: "Orbitron", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-code: "Share Tech Mono", monospace;
+
+  --border-size: 5px;
+}
+
+/*** header ***/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--text-secondary);
+  padding-left: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-size);
+  overflow: hidden;
+}
+.logo span {
+  background-color: var(--bg-secondary);
+  padding: 5px;
+  border-radius: var(--border-size);
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav > a {
+  color: var(--text-secondary);
+  padding: 5px;
+}
+
+/*** Menu burger ***/
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 25px;
+  z-index: 1002;
+  cursor: pointer;
+  border-radius: var(--border-size);
+}
+.burger .bar {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: var(--border-size);
+  background-color: var(--text-secondary);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.burger .bar1 {
+  left: 0;
+  top: 0;
+}
+.burger .bar2 {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger .bar3 {
+  left: 0;
+  bottom: 0;
+}
+
+.burger.open .bar1 {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.burger.open .bar2 {
+  opacity: 0;
+}
+.burger.open .bar3 {
+  bottom: 50%;
+  transform: rotate(-50deg);
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 30px 20px;
+  }
+  nav {
+    width: 100%;
+    flex-direction: column;
+    height: 0;
+    gap: 15px;
+    text-align: center;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-radius: var(--border-size);
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.3s ease, padding 0.3s ease,
+      margin-top 0.3s ease;
+  }
+  nav.active {
+    margin-top: 10px;
+    padding: 30px 0 0;
+    height: max-content;
+    opacity: 1;
+  }
+
+  nav > button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
